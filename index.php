@@ -78,6 +78,9 @@ Kirby::plugin('diesdasdigital/imgix', [
                 if ($file->type() === 'image') {
                     return imgix($file->mediaUrl());
                 }
+                elseif ($file->type() === 'video') {
+                    return imgix($file->mediaUrl());
+                }
                 return $file->mediaUrl();
             }
 
